@@ -1,8 +1,10 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
-import './categories_screens.dart';
-import './categories_meals_screen.dart';
+import 'package:mealsApp/pages/tabs_screens.dart';
+import './pages/tabs_screens.dart';
+import './pages/categories_meals_screen.dart';
+import './pages/meal_screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -17,21 +19,22 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.pink,
         accentColor: Colors.amber,
-        canvasColor: Color.fromARGB(255, 254, 229, 1),
+        canvasColor: Color.fromRGBO(255, 254, 229, 1),
         textTheme: ThemeData.light().textTheme.copyWith(
               bodyText1: TextStyle(
-                color: Color.fromARGB(20, 51, 51, 1),
+                color: Color.fromRGBO(20, 51, 51, 1),
               ),
               bodyText2: TextStyle(
-                color: Color.fromARGB(20, 51, 51, 1),
+                color: Color.fromRGBO(20, 51, 51, 1),
               ),
               headline6: TextStyle(fontSize: 20, fontFamily: 'RobotoCondensed'),
             ),
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: CategoryScreens(),
+      home: TabsScreen(),
       routes: {
-        'category_meals_screen': (ctx) => CategoryMealsScreen()
+        CategoryMealsScreen.route: (ctx) => CategoryMealsScreen(),
+        MealScreen.route: (ctx) => MealScreen(),
       }, // pages routes parameters
     );
   }
