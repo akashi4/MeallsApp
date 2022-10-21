@@ -3,7 +3,7 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 
 import './dummy-data.dart';
-import './pages/FiltersScreen.dart';
+import './pages/filtersScreen.dart';
 import './pages/tabs_screens.dart';
 import './pages/categories_meals_screen.dart';
 import './pages/meal_screen.dart';
